@@ -1,0 +1,389 @@
+:root{
+    --hot-toddy-50: #faf9ec;
+    --hot-toddy-100: #f4f1cd;
+    --hot-toddy-200: #eae19e;
+    --hot-toddy-300: #ddcc67;
+    --hot-toddy-400: #d2b53d;
+    --hot-toddy-500: #c3a02f;
+    --hot-toddy-600: #af8428;
+    --hot-toddy-700: #865d22;
+    --hot-toddy-800: #704c23;
+    --hot-toddy-900: #614022;
+    --hot-toddy-950: #382110;
+    /* comlementarios */
+    --azure-50: #f0f8fe;
+    --azure-100: #ddeefc;
+    --azure-200: #c3e3fa;
+    --azure-300: #99d2f7;
+    --azure-400: #69b9f1;
+    --azure-500: #459dec;
+    --azure-600: #3080e0;
+    --azure-700: #276bce;
+    --azure-800: #285baf;
+    --azure-900: #244b84;
+    --azure-950: #1a2f51;
+
+
+}
+
+html *{
+    border:1px solid back;
+    font-family: Raleway;
+}
+
+*, ::before, ::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+    border:1px solid black;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    *{
+        scroll-behavior:smooth;
+    }
+}
+
+/* Visible section */
+/* navigation bar section */
+
+#navbar{
+    position:sticky;
+    top:0px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    height:100px;
+    max-height: 85px;
+    z-index:1;
+    min-height:40px;
+    background-color:var();
+    opacity:1;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.logo-container{
+    width:30vw;
+    max-width:140px;
+    height:8vw;
+    max-height:60px;
+    min-height:30px;
+    display:flex;
+    margin-left:20px;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-container  img{
+    object-fit: cover;
+    height:50px;
+    max-height: 50px;
+    min-height: 25px;
+    min-width: 25px;
+    width:50px;
+    max-width: 50px;
+    border-radius:50%;
+    border:1px solid grey;
+}
+
+.logo-container h1{
+    font-size: 1.6rem;
+
+}
+
+.logo-container a{
+    text-decoration: none;
+    color:black;
+}
+
+@media (max-width:480px){
+    .logo-container h1{
+        display:none;
+    }
+
+    .logo-container{
+        justify-content:center;
+    }
+}
+
+#navlist{
+    list-style-type: none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    height:40px;
+    margin-right:20px;
+    width:55vw;
+    min-width:240px;
+    max-width:400px;
+}
+
+@media (max-width:450px){
+    #navlist{
+        width:300px;
+    }
+
+    .logo-container{
+        justify-content: center;
+    }
+}
+
+@media (max-width:400px){
+    .logo-container img{
+        width:40px;
+        height:40px;
+        margin-right: 5px;
+        margin-left: -10px;
+    }
+}
+
+#navlist li{
+    height:fit-content;
+    width:fit-content;
+    margin-right:0;
+}
+
+#navlist a{
+    text-decoration: none;
+    color:black;
+    font-size:1.3rem;
+    max-width:150px;
+}
+
+@media (max-width:350px){
+    #navlist a{
+        text-decoration: none;
+        color:black;
+        font-size:1rem;
+        max-width:150px;
+        min-width:130px;
+    }
+
+    #navlist{
+        min-width:100px;
+    }
+}
+
+#navlist a:hover{
+    text-decoration:underline;
+    /* color:grey; */
+    /* intenta poner algún tipo de animación o algo más */
+}
+
+#navlist a:active{
+    color:grey;
+}
+
+/* main page */
+/* welcome zone */
+
+#welcome{
+    width:100%;
+    height: calc(100vh - 90px);
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    background:url(Desert-2.jpg);
+    background-size: cover;
+}
+
+@media (max-width:1350px){
+    #welcome{
+        background-position: 0% 0%;    
+    }
+}
+
+ @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.welcome-container{
+    margin-bottom:20px;
+}
+
+.welcome-container h1{
+    text-align:center;
+    margin-top:140px;
+    margin-bottom:20px;
+    font-size:6.5rem;
+    font-family: Roboto;
+    filter:brightness(1);
+    /* color:black; */
+    animation: tracking-in-expand 1s;
+    background-color:white;
+    border-radius:5px;
+    padding:0 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    opacity:0.9;
+}
+
+.welcome-container h2{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:20px;
+    font-family: Roboto;
+}
+
+.description-container{
+    text-align:center;
+    font-size:1.2rem;
+    margin-top:48px;
+    color:white;
+    /* color:black; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.description-container p{
+    margin-top:20px;
+}
+
+@media(max-width:450px){
+    #welcome h1{
+        font-size:2.8rem;
+    }
+
+    #welcome h2{
+        font-size:1rem;
+    }
+}
+
+.transition-1{
+    width:100%;
+    height:30px;
+}
+/* about me zone */
+
+#about-me{
+    width:100%;
+    height:90vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+#about-me h1{
+    font-size: 4rem;
+    margin-top:100px;
+    margin-bottom:200px;
+    z-index:0;
+    /* color:white; */
+}
+
+.about-me-text{
+    width:79%;
+    text-align: justify;
+    color:rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color:rgba(255, 255, 255, 0.329);
+    border-radius: 7px;
+    padding:3px 15px;
+    backdrop-filter: blur(10px);
+    font-weight: 200;
+}
+
+.about-me-text:hover{
+    animation:scale-in-center 0.2s;
+}
+
+.about-me-text p{
+    line-height:35px;
+    font-family:Open Sans;
+}
+
+@media (max-width:350px){
+    #about-me h1{
+        font-size:2.8rem;
+    }
+
+/* crea otro que lo haga incluso más peque si la pag es peque, como un doble escalon */
+}
+
+/* projects zone */
+
+#projects{
+    width:100%;
+    height:80vh;
+}
+
+#projects h1{
+    text-align:center;
+    margin-top:90px;
+    font-size:2rem;
+}
+
+.projects-container{
+    width:100%;
+    height:calc(100% - (90px + 2.5rem + 40px));
+    margin-top:40px;
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+    place-content: center;
+}
+
+
+#socials{
+    width:100%;
+    height:30vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials-container{
+    width:80vw;
+    height:50px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size:3rem;
+}
+
+.socials-container a{
+    text-decoration: none;
+    color:black;
+}
+
+.socials-container a:hover{
+    color: grey;
+    /* crea una animación que cuando le pases por encima se haga un poquito más grande y si eso que aparezca el instagram escrito o algo */
+}
+
+footer{
+    background-color: grey;
+    width:100%;
+    height:10vh;
+    text-align:center;
+    line-height: 30px;
+    font-size: 0.9rem;
+    /* ponle un color bueno y hazlo un poco más radiante */
+}
