@@ -287,6 +287,8 @@ html *{
     flex-direction: column;
     justify-content:flex-start;
     align-items:center;
+    background-size: auto;
+    background: url(Decoration\ photos/Desert.jpg);
 }
 
 #about-me h1{
